@@ -76,64 +76,8 @@ export default function Testimonials() {
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Student <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Success Stories</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Hear from our graduates who are now working at top tech companies worldwide
-          </p>
-        </div>
-
-        <div className="relative">
-          <div className="flex gap-8 transition-transform duration-1000 ease-in-out">
-            {getVisibleTestimonials().map((testimonial, index) => (
-              <Card key={`${testimonial.id}-${currentIndex}`} className="flex-1 min-w-0 hover:shadow-xl transition-all duration-300 border-0 bg-white">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
-                    <Quote className="h-8 w-8 text-purple-600 mr-3" />
-                    <div className="flex space-x-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
-                    "{testimonial.content}"
-                  </p>
-                  
-                  <div className="flex items-center">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover mr-4"
-                    />
-                    <div>
-                      <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                      <p className="text-purple-600 font-medium">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Pagination dots */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-purple-600' : 'bg-gray-300'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div className="elfsight-app-5a27fec7-8cc2-4336-b757-805f1be1fa2d" data-elfsight-app-lazy></div>
     </section>
   );
 }
